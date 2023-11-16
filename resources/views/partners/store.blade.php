@@ -6,7 +6,7 @@
         <x-nav />
         <div class="home-content">
             <div class="home-banner">
-                <h2>NOVO FORNECEDOR</h2>
+                <h2>Novo Fornecedor</h2>
             </div>
             <div class="home-form">
                 <form method="POST" action="{{ route("partners.insert") }}">

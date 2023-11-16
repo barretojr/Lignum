@@ -7,7 +7,7 @@
                 <h2>Pedidos</h2>
             </div>
             <div class="home-buttons">
-                <a href="{{ route('products.store') }}">NOVOS Pedidos</a>
+                <a href="{{ route('products.store') }}">Novo Pedido</a>
                 <a href="{{ route('products.list') }}">Pedidos</a>
             </div>
             <div>

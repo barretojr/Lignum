@@ -7,7 +7,7 @@
                 <h2>Clientes</h2>
             </div>
             <div class="home-buttons">
-                <a href="{{ route('clients.store') }}">NOVOS Clientes</a>
+                <a href="{{ route('clients.store') }}">Novo Cliente</a>
                 <a href="{{ route('clients.list') }}">Clientes</a>
             </div>
             <div>

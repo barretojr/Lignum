@@ -4,7 +4,7 @@
         <x-nav />
         <div class="home-content">
             <div class="home-banner">
-                <h2>NOVO PEDIDO</h2>
+                <h2>Novo Pedido</h2>
             </div>
             <div class="home-form">
                 <form method="POST" action="{{ route("products.insert") }}">

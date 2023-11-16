@@ -4,7 +4,7 @@
         <x-nav />
         <div class="home-content">
             <div class="home-banner">
-                <h2>EDITAR PRODUTO</h2>
+                <h2>Editar Produto</h2>
             </div>
             <div class="home-form">
                 <form method="POST" action="{{ route("items.update", ["item" => $items->id]) }}">

@@ -6,7 +6,7 @@
         <x-nav />
         <div class="home-content">
             <div class="home-banner">
-                <h2>EDITAR FORNECEDOR</h2>
+                <h2>Editar Fornecedor</h2>
             </div>
             <div class="home-form">
                 <form method="POST" action="{{ route("partners.update", ["partner" => $partners->id]) }}">

@@ -7,11 +7,11 @@
                 <h2>Estoque</h2>
             </div>
             <div class="home-buttons">
-                <a href="{{ route('partners.store') }}">NOVOS Fornecedores</a>
+                <a href="{{ route('partners.store') }}">Novo Fornecedor</a>
                 <a href="{{ route('partners.list') }}">Fornecedores</a>
             </div>
             <div class="home-buttons">
-                <a href="{{ route('items.store') }}">NOVOS Produtos</a>
+                <a href="{{ route('items.store') }}">Novo Produtos</a>
                 <a href="{{ route('items.list') }}">Produtos</a>
             </div>
             <div>
