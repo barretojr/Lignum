@@ -6,7 +6,13 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+
+    Route::get('/financial', [App\Http\Controllers\FinancialController::class, 'index'])->name('financial.index');
+    Route::get('/financial/payable', [App\Http\Controllers\FinancialController::class,'payable'])->name('financial.payable');
+    Route::post('/financial/payable', [App\Http\Controllers\FinancialController::class,'payable'])->name('financial.payableinsert');
+    Route::get('/financial/receivable', [App\Http\Controllers\FinancialController::class,'receivable'])->name('financial.receivable');
+    Route::post('/financial/receivable', [App\Http\Controllers\FinancialController::class,'receivable'])->name('financial.receivableinset'); 
 
     Route::get('/products', [App\Http\Controllers\ProductsController::class, 'index'])->name('products.index');
     Route::get('/products/list', [App\Http\Controllers\ProductsController::class, 'list'])->name('products.list');
@@ -38,5 +44,3 @@ Route::middleware(['auth'])->group(function () {
     Route::get("/items/{item}", [App\Http\Controllers\ItemsController::class, "show"])->name('items.show');
     Route::post("/items/{item}", [App\Http\Controllers\ItemsController::class, "update"])->name('items.update');
 });
-
-

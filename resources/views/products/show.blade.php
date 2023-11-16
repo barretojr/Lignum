@@ -34,7 +34,7 @@
                     <div class="column-group">
                         <div class="form-group">
                             <label for="description">Descrição do pedido</label>
-                            <input type="text" name="description" required value="{{ $products->description }}"/>
+                            <input type="text" name="description" value="{{ $products->description }}"/>
                         </div>
                         <div class="form-group">
                             <label for="value">Valor do pedido</label>

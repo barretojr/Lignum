@@ -5,7 +5,7 @@
     <a href="{{ route('products.index') }}">
         <img src="{{ asset("img/work.png") }}" />
     </a>
-    <a href="">
+    <a href="{{ route('financial.index')}}">
         <img src="{{ asset("img/graph.png") }}" />
     </a>
     <a href="{{ route('clients.index') }}">

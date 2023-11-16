@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-*{
+* {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
 }
 
-input, select, button{
+input,
+select,
+button {
     border: 1px solid #00000017;
     border-radius: 4px;
     font-size: 17px;
@@ -18,40 +20,46 @@ input, select, button{
     padding: 6px 12px;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-input:hover, select:hover, button:hover{
+input:hover,
+select:hover,
+button:hover {
     border: 1px solid #00000066;
 }
 
-.form-account{
+.form-account {
     display: flex;
     min-height: 100vh;
     width: 100%;
 }
 
 .form-account .form-div,
-.form-account .form-background{
+.form-account .form-background {
     flex: 1;
 }
 
-.form-account .form-div{
+.form-account .form-div {
     align-items: center;
-    background: rgb(235,211,138);
-    background: linear-gradient(180deg, rgba(235,211,138,1) 0%, rgba(175,92,79,1) 100%);
+    background: rgb(235, 211, 138);
+    background: linear-gradient(
+        180deg,
+        rgba(235, 211, 138, 1) 0%,
+        rgba(175, 92, 79, 1) 100%
+    );
     display: flex;
     flex-direction: column;
 }
 
-.form-account .form-background{
+.form-account .form-background {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.form-account form{
+.form-account form {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -62,17 +70,17 @@ input:hover, select:hover, button:hover{
     width: 100%;
 }
 
-.form-account form img{
+.form-account form img {
     margin: 0px 0px 36px;
     width: 100%;
 }
 
 .form-account form input,
-.form-account form label{
+.form-account form label {
     width: 100%;
 }
 
-.form-account form input{
+.form-account form input {
     background-color: #ad835d;
     border: 2px solid white;
     border-radius: 20px;
@@ -81,13 +89,13 @@ input:hover, select:hover, button:hover{
     padding: 19px 20px;
 }
 
-.form-account form input::placeholder{
+.form-account form input::placeholder {
     color: white;
     text-align: center;
 }
 
-.form-account form button{
-    background-color: #AF5C4F;
+.form-account form button {
+    background-color: #af5c4f;
     border: 2px solid white;
     border-radius: 20px;
     color: white;
@@ -95,54 +103,58 @@ input:hover, select:hover, button:hover{
     width: 100%;
 }
 
-.form-account form span{
+.form-account form span {
     color: white;
     margin: 0px 0px 12px;
 }
 
-.home-layout{
+.home-layout {
     display: grid;
     grid-template-columns: 200px auto;
     min-height: 100vh;
 }
 
-.home-layout nav{
+.home-layout nav {
     display: flex;
     flex-direction: column;
     grid-column: 1 / 2;
 }
 
-.home-layout nav a{
+.home-layout nav a {
     align-items: center;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     border: 1px solid black;
     display: flex;
     flex: 1;
     justify-content: center;
 }
 
-.home-layout nav a:hover{
+.home-layout nav a:hover {
     background-color: #bdbdbd;
 }
 
-.home-layout .home-content{
+.home-layout .home-content {
     align-items: center;
-    background: rgb(235,211,138);
-    background: linear-gradient(180deg, rgba(235,211,138,1) 0%, rgba(175,92,79,1) 100%);
+    background: rgb(235, 211, 138);
+    background: linear-gradient(
+        180deg,
+        rgba(235, 211, 138, 1) 0%,
+        rgba(175, 92, 79, 1) 100%
+    );
     display: flex;
     flex-direction: column;
     grid-column: 2 / 3;
     padding: 12px 20px;
 }
 
-.home-layout .home-content .home-banner{
-    background-color: #D9D9D9;
+.home-layout .home-content .home-banner {
+    background-color: #d9d9d9;
     border-radius: 25px;
     border: 1px solid black;
     width: 631px;
 }
 
-.home-layout .home-content .home-banner h2{
+.home-layout .home-content .home-banner h2 {
     font-size: 48px;
     font-weight: 400;
     line-height: 72px;
@@ -150,33 +162,33 @@ input:hover, select:hover, button:hover{
     text-transform: uppercase;
 }
 
-.home-layout .home-content .home-buttons{
+.home-layout .home-content .home-buttons {
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 24px 0px 0px;
 }
 
-.home-layout .home-content .home-form{
+.home-layout .home-content .home-form {
     margin: 24px 0px 0px;
 }
 
-.home-layout .home-content .home-form form{
+.home-layout .home-content .home-form form {
     display: flex;
     flex-direction: column;
 }
 
-.home-layout .home-content .home-form .column-group{
+.home-layout .home-content .home-form .column-group {
     display: flex;
 }
 
-.home-layout .home-content .home-form .form-group{
+.home-layout .home-content .home-form .form-group {
     display: flex;
     flex-direction: column;
     margin: 12px;
 }
 
-.home-layout .home-content .home-form .form-group label{
+.home-layout .home-content .home-form .form-group label {
     color: white;
     font-weight: 500;
     font-size: 17px;
@@ -184,7 +196,7 @@ input:hover, select:hover, button:hover{
 }
 
 .home-layout .home-content .home-form .form-group input,
-.home-layout .home-content .home-form .form-group select{
+.home-layout .home-content .home-form .form-group select {
     background: unset;
     border: 2px solid white;
     border-radius: 20px;
@@ -192,7 +204,7 @@ input:hover, select:hover, button:hover{
     width: 350px;
 }
 
-.home-layout .home-content .home-form .column-footer{
+.home-layout .home-content .home-form .column-footer {
     display: flex;
     justify-content: space-between;
     margin: 12px;
@@ -201,7 +213,7 @@ input:hover, select:hover, button:hover{
 .home-layout .home-content .home-form .column-footer button,
 .home-layout .home-content .home-form .column-footer div {
     align-items: center;
-    background-color: #AF5C4F;
+    background-color: #af5c4f;
     border: 2px solid white;
     border-radius: 20px;
     color: white;
@@ -212,14 +224,14 @@ input:hover, select:hover, button:hover{
     width: 150px;
 }
 
-.home-layout .home-content .home-form .column-footer div a{
+.home-layout .home-content .home-form .column-footer div a {
     color: white;
     text-decoration: none;
 }
 
-.home-layout .home-content .home-buttons a{
+.home-layout .home-content .home-buttons a {
     align-items: center;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     border: 1px solid #00000033;
     border-radius: 20px;
     color: black;
@@ -234,7 +246,7 @@ input:hover, select:hover, button:hover{
     width: 300px;
 }
 
-.alert{
+.alert {
     background-color: lightgreen;
     border-left: 5px solid green;
     color: green;
@@ -243,14 +255,14 @@ input:hover, select:hover, button:hover{
     padding: 12px 20px;
 }
 
-.home-layout .home-content .home-products{
+.home-layout .home-content .home-products {
     display: flex;
     flex-wrap: wrap;
     margin: 24px 0px 0px;
 }
 
-.home-layout .home-content .home-products .product-item{
-    background-color: #D9D9D9;
+.home-layout .home-content .home-products .product-item {
+    background-color: #d9d9d9;
     border-radius: 25px;
     border: 1px solid black;
     margin: 12px;
@@ -258,7 +270,7 @@ input:hover, select:hover, button:hover{
     width: 170px;
 }
 
-.home-layout .home-content .home-products .product-item h3{
+.home-layout .home-content .home-products .product-item h3 {
     color: black;
     font-size: 24px;
     font-weight: 400;
@@ -266,7 +278,7 @@ input:hover, select:hover, button:hover{
     text-align: center;
 }
 
-.home-layout .home-content .home-products .product-item p{
+.home-layout .home-content .home-products .product-item p {
     color: black;
     font-size: 14px;
     font-weight: 400;
@@ -274,7 +286,7 @@ input:hover, select:hover, button:hover{
     text-align: center;
 }
 
-.home-layout .home-content .home-products .product-item .details{
+.home-layout .home-content .home-products .product-item .details {
     align-items: center;
     border-radius: 25px;
     border: 1px solid #00000033;
@@ -284,11 +296,11 @@ input:hover, select:hover, button:hover{
     width: 100%;
 }
 
-.home-layout .home-content .home-products .product-item .product-info{
+.home-layout .home-content .home-products .product-item .product-info {
     min-height: 129px;
 }
 
-.home-layout .home-content .home-products .product-item .details a{
+.home-layout .home-content .home-products .product-item .details a {
     color: black;
     font-size: 14px;
     font-weight: 400;
@@ -297,19 +309,19 @@ input:hover, select:hover, button:hover{
     text-decoration: none;
 }
 
-.home-layout .home-content .home-products table{
+.home-layout .home-content .home-products table {
     width: 100%;
 }
 
 .home-layout .home-content .home-products table th,
 .home-layout .home-content .home-products table td {
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     padding: 6px;
     text-align: center;
     vertical-align: middle;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
     .home-layout {
         grid-template-columns: 100px auto;
     }
@@ -324,20 +336,24 @@ input:hover, select:hover, button:hover{
         flex-wrap: wrap;
     }
 
-    .home-layout .home-content .home-form .column-group{
+    .home-layout .home-content .home-form .column-group {
         justify-content: center;
     }
 }
 
-@media only screen and (max-width: 700px){
-    .form-account .form-background{
+@media only screen and (max-width: 700px) {
+    .form-account .form-background {
         display: none;
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
     .home-layout {
-        background: linear-gradient(180deg, rgba(235,211,138,1) 0%, rgba(175,92,79,1) 100%);;
+        background: linear-gradient(
+            180deg,
+            rgba(235, 211, 138, 1) 0%,
+            rgba(175, 92, 79, 1) 100%
+        );
         display: flex;
         flex-direction: column-reverse;
     }
@@ -345,7 +361,7 @@ input:hover, select:hover, button:hover{
     .home-layout .home-content {
         background: unset;
     }
-        
+
     .home-layout nav {
         flex-direction: row;
     }
@@ -362,11 +378,11 @@ input:hover, select:hover, button:hover{
         font-size: 24px;
     }
 
-    .home-layout .home-content .home-products div{
+    .home-layout .home-content .home-products div {
         max-width: 300px;
     }
 
-    .home-layout .home-content .home-form .form-group input, 
+    .home-layout .home-content .home-form .form-group input,
     .home-layout .home-content .home-form .form-group select {
         width: 280px;
     }
@@ -375,8 +391,51 @@ input:hover, select:hover, button:hover{
         align-items: center;
     }
 
-    .home-layout .home-content .home-form .column-footer button, 
+    .home-layout .home-content .home-form .column-footer button,
     .home-layout .home-content .home-form .column-footer div {
         width: 90px;
     }
+}
+/* ---------------------------------------------------------------------- */
+.financial-card {
+    background-color: #d9d9d9;
+    border: 1px solid #00000033;
+    color: black;
+}
+.custom-card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card .card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.custom-card .card-body {
+    padding: 20px;
+}
+
+.custom-card .card-title {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+
+#myChart {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
