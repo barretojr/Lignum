@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+input, select, button{
+    border: 1px solid #00000017;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 6px 0px;
+    outline: none;
+    transition: border 0.4s ease-in;
+    padding: 6px 12px;
+}
+
+button{
+    cursor: pointer;
+}
+
+input:hover, select:hover, button:hover{
+    border: 1px solid #00000066;
+}
+
+.form-account{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.form-account .form-div,
+.form-account .form-background{
+    flex: 1;
+}
+
+.form-account .form-div{
+    align-items: center;
+    background: rgb(235,211,138);
+    background: linear-gradient(180deg, rgba(235,211,138,1) 0%, rgba(175,92,79,1) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-account .form-background{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-account form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 353px;
+    min-height: 100vh;
+    padding: 42px 20px;
+    width: 100%;
+}
+
+.form-account form img{
+    margin: 0px 0px 36px;
+    width: 100%;
+}
+
+.form-account form input,
+.form-account form label{
+    width: 100%;
+}
+
+.form-account form input{
+    background-color: #ad835d;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    margin: 0px 0px 18px;
+    padding: 19px 20px;
+}
+
+.form-account form input::placeholder{
+    color: white;
+    text-align: center;
+}
+
+.form-account form button{
+    background-color: #AF5C4F;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    padding: 19px 20px;
+    width: 100%;
+}
+
+.form-account form span{
+    color: white;
+    margin: 0px 0px 12px;
+}
+
+.home-layout{
+    display: grid;
+    grid-template-columns: 200px auto;
+    min-height: 100vh;
+}
+
+.home-layout nav{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+}
+
+.home-layout nav a{
+    align-items: center;
+    background-color: #D9D9D9;
+    border: 1px solid black;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.home-layout nav a:hover{
+    background-color: #bdbdbd;
+}
+
+.home-layout .home-content{
+    align-items: center;
+    background: rgb(235,211,138);
+    background: linear-gradient(180deg, rgba(235,211,138,1) 0%, rgba(175,92,79,1) 100%);
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 3;
+    padding: 12px 20px;
+}
+
+.home-layout .home-content .home-banner{
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    border: 1px solid black;
+    width: 631px;
+}
+
+.home-layout .home-content .home-banner h2{
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 72px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.home-layout .home-content .home-buttons{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 24px 0px 0px;
+}
+
+.home-layout .home-content .home-form{
+    margin: 24px 0px 0px;
+}
+
+.home-layout .home-content .home-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-layout .home-content .home-form .column-group{
+    display: flex;
+}
+
+.home-layout .home-content .home-form .form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+}
+
+.home-layout .home-content .home-form .form-group label{
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25.5px;
+}
+
+.home-layout .home-content .home-form .form-group input,
+.home-layout .home-content .home-form .form-group select{
+    background: unset;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 60px;
+    width: 350px;
+}
+
+.home-layout .home-content .home-form .column-footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+.home-layout .home-content .home-form .column-footer button,
+.home-layout .home-content .home-form .column-footer div {
+    align-items: center;
+    background-color: #AF5C4F;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    text-decoration: none;
+    width: 150px;
+}
+
+.home-layout .home-content .home-form .column-footer div a{
+    color: white;
+    text-decoration: none;
+}
+
+.home-layout .home-content .home-buttons a{
+    align-items: center;
+    background-color: #D9D9D9;
+    border: 1px solid #00000033;
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    font-size: 21px;
+    margin: 12px;
+    height: 120px;
+    justify-content: center;
+    line-height: 31.5px;
+    text-align: center;
+    text-decoration: none;
+    width: 300px;
+}
+
+.alert{
+    background-color: lightgreen;
+    border-left: 5px solid green;
+    color: green;
+    font-size: 17px;
+    border-radius: 6px;
+    padding: 12px 20px;
+}
+
+.home-layout .home-content .home-products{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px 0px 0px;
+}
+
+.home-layout .home-content .home-products .product-item{
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin: 12px;
+    height: 170px;
+    width: 170px;
+}
+
+.home-layout .home-content .home-products .product-item h3{
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+
+.home-layout .home-content .home-products .product-item p{
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+}
+
+.home-layout .home-content .home-products .product-item .details{
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid #00000033;
+    display: flex;
+    height: 39px;
+    justify-content: center;
+    width: 100%;
+}
+
+.home-layout .home-content .home-products .product-item .product-info{
+    min-height: 129px;
+}
+
+.home-layout .home-content .home-products .product-item .details a{
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.home-layout .home-content .home-products table{
+    width: 100%;
+}
+
+.home-layout .home-content .home-products table th,
+.home-layout .home-content .home-products table td {
+    background-color: #D9D9D9;
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 900px){
+    .home-layout {
+        grid-template-columns: 100px auto;
+    }
+
+    .home-layout .home-content .home-banner {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .home-layout .home-content .home-buttons,
+    .home-layout .home-content .home-form .column-group {
+        flex-wrap: wrap;
+    }
+
+    .home-layout .home-content .home-form .column-group{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .form-account .form-background{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .home-layout {
+        background: linear-gradient(180deg, rgba(235,211,138,1) 0%, rgba(175,92,79,1) 100%);;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .home-layout .home-content {
+        background: unset;
+    }
+        
+    .home-layout nav {
+        flex-direction: row;
+    }
+
+    .home-layout .home-content .home-buttons a {
+        width: 200px;
+    }
+
+    .home-layout .home-content .home-banner {
+        max-width: 200px;
+    }
+
+    .home-layout .home-content .home-banner h2 {
+        font-size: 24px;
+    }
+
+    .home-layout .home-content .home-products div{
+        max-width: 300px;
+    }
+
+    .home-layout .home-content .home-form .form-group input, 
+    .home-layout .home-content .home-form .form-group select {
+        width: 280px;
+    }
+
+    .home-layout .home-content .home-form .column-footer {
+        align-items: center;
+    }
+
+    .home-layout .home-content .home-form .column-footer button, 
+    .home-layout .home-content .home-form .column-footer div {
+        width: 90px;
+    }
+}
