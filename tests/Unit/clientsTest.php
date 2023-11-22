@@ -24,7 +24,7 @@ class ClientsTest extends TestCase
      */
     public function testList()
     {
-        $response = $this->get('/clients/list');
+        $response = $this->get('http://127.0.0.1:8000/clients/list');
         $response->assertStatus(200);
     }
 
@@ -36,7 +36,7 @@ class ClientsTest extends TestCase
     public function testSearch()
     {
         
-        $response = $this->post('/clients/search', ['search_client' => 'example']);
+        $response = $this->post('http://127.0.0.1:8000/clients/search', ['search_client' => 'example']);
         $response->assertStatus(200);
     }
 
@@ -48,9 +48,8 @@ class ClientsTest extends TestCase
     public function testShow()
     {
         $clientId = 1; // Substitua pelo ID real do cliente a ser testado
-        $response = $this->get("/clients/{$clientId}");
+        $response = $this->get("http://127.0.0.1:8000/clients/{$clientId}");
         $response->assertStatus(200);
-        // Adicione asserções relevantes para garantir o comportamento esperado.
     }
 
     /**

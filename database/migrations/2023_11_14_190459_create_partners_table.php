@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->string("cnpj");
+            $table->string("cnpj")->nullable();;
             $table->string("email");
-            $table->string("cellphone");
+            $table->string("cellphone")->nullable();;
             $table->string("address");
             $table->string("number");
             $table->string("complement");
-            $table->string("cep");
+            $table->string("cep")->nullable();;
             $table->timestamps();
         });
     }

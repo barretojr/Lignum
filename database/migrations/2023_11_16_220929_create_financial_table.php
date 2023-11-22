@@ -12,16 +12,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('typefinancial', function (Blueprint $table) {
-            $table->id();
-            $table->string('description');
-        });
-
         Schema::create('financial', function (Blueprint $table) {
             $table->id();
             $table->string("description");
-            $table->unsignedBigInteger("type");
-            $table->foreign('type')->references('id')->on('typefinancial');
+            $table->integer("typefinancial");
             $table->decimal("value", 10, 2);
             $table->timestamps();
         });
@@ -32,9 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        DB::table('financial')->whereNotNull('type')->delete();
-
-        Schema::dropIfExists('typefinancial');
         Schema::dropIfExists('financial');        
     }
 };

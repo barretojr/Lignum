@@ -15,7 +15,6 @@ class ProductsTest extends TestCase
     {
         $response = $this->get('/products/store');
         $response->assertStatus(200);
-        // Adicione mais verificações conforme necessário para garantir que a view está sendo retornada corretamente.
     }
 
     /**
@@ -27,7 +26,6 @@ class ProductsTest extends TestCase
     {
         $response = $this->get('/products/list');
         $response->assertStatus(200);
-        // Adicione mais verificações conforme necessário para garantir que a view está sendo retornada corretamente.
     }
 
     /**
@@ -40,18 +38,6 @@ class ProductsTest extends TestCase
         $productId = 1; // Substitua pelo ID real do produto a ser testado
         $response = $this->get("/products/{$productId}");
         $response->assertStatus(200);
-        // Adicione mais verificações conforme necessário para garantir que a view está sendo retornada corretamente.
-    }
-
-    /**
-     * Testa o método insert do ProductsController.
-     *
-     * @return void
-     */
-    public function testInsert()
-    {
-        // Adicione a lógica para simular uma requisição de inserção de produto e verifique a resposta.
-        // Considere usar o método $this->post para simular uma solicitação POST.
     }
 
     /**
@@ -61,8 +47,7 @@ class ProductsTest extends TestCase
      */
     public function testUpdate()
     {
-        $productId = 1; // Substitua pelo ID real do produto a ser testado
-        // Adicione a lógica para simular uma requisição de atualização de produto e verifique a resposta.
-        // Considere usar o método $this->post para simular uma solicitação POST.
+        $productId = 1;
+        $response = $this->post("");
     }
 }

@@ -26,17 +26,17 @@
                     <div class="column-group">
                         <div class="form-group">
                             <label for="rg">RG</label>
-                            <input type="text" name="rg" id="rg" required/>
+                            <input type="text" name="rg" id="rg" />
                         </div>
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" name="cpf" id="cpf" required/>
+                            <input type="text" name="cpf" id="cpf" />
                         </div>
                     </div>
                     <div class="column-group">
                         <div class="form-group">
                             <label for="birthday">Data de nascimento</label>
-                            <input type="date" name="birthday" required/>
+                            <input type="date" name="birthday" />
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail</label>
@@ -46,11 +46,11 @@
                     <div class="column-group">
                         <div class="form-group">
                             <label for="cellphone">Celular</label>
-                            <input type="text" name="cellphone" id="cellphone" required />
+                            <input type="text" name="cellphone" id="cellphone"  />
                         </div>
                         <div class="form-group">
                             <label for="cep">CEP</label>
-                            <input type="text" name="cep" id="cep" required />
+                            <input type="text" name="cep" id="cep"  />
                         </div>
                     </div>
                     <div class="column-group">

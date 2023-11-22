@@ -22,5 +22,21 @@ class Client extends Model
         'cep',
         'status'
     ];
+    protected $nullable = [
+        'rg',
+        'cpf',
+        'birthday',
+        'cellphone',
+        'cep',
+    ];
+    
+    public function setAttribute($key, $value)
+    {
+        if (in_array($key, $this->nullable) && $value === '') {
+            $this->attributes[$key] = null;
+        } else {
+            parent::setAttribute($key, $value);
+        }
+    }
 
 }

@@ -15,7 +15,6 @@ class ItemsTest extends TestCase
     {
         $response = $this->get('/items/store');
         $response->assertStatus(200);
-        // Adicione mais verificações conforme necessário para garantir que a view está sendo retornada corretamente.
     }
 
     /**
@@ -27,30 +26,6 @@ class ItemsTest extends TestCase
     {
         $response = $this->get('/items/list');
         $response->assertStatus(200);
-        // Adicione mais verificações conforme necessário para garantir que a view está sendo retornada corretamente.
-    }
-
-    /**
-     * Testa o método insert do ItemsController.
-     *
-     * @return void
-     */
-    public function testInsert()
-    {
-        // Adicione a lógica para simular uma requisição de inserção de item e verifique a resposta.
-        // Considere usar o método $this->post para simular uma solicitação POST.
-    }
-
-    /**
-     * Testa o método update do ItemsController.
-     *
-     * @return void
-     */
-    public function testUpdate()
-    {
-        $itemId = 1; // Substitua pelo ID real do item a ser testado
-        // Adicione a lógica para simular uma requisição de atualização de item e verifique a resposta.
-        // Considere usar o método $this->post para simular uma solicitação POST.
     }
 
     /**
@@ -60,9 +35,8 @@ class ItemsTest extends TestCase
      */
     public function testShow()
     {
-        $itemId = 1; // Substitua pelo ID real do item a ser testado
+        $itemId = 1; 
         $response = $this->get("/items/{$itemId}");
         $response->assertStatus(200);
-        // Adicione mais verificações conforme necessário para garantir que a view está sendo retornada corretamente.
     }
 }
