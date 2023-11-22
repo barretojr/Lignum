@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
 <div class="home-layout">
     <x-nav />
@@ -12,7 +13,7 @@
         </div>
         <div class="row">
             <!-- Cards da parte de cima -->
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <div class="card text-center financial-card">
                     <div class="card-header">
                         Total Receita
@@ -22,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <div class="card text-center financial-card">
                     <div class="card-header">
                         Contas a Receber
@@ -32,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4  ">
+            <div class="col-md-4">
                 <div class="card text-center financial-card">
                     <div class="card-header">
                         Lucro Líquido
@@ -42,8 +43,14 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4 ">
+        </div>
+        <!-- Linha separadora -->
+        <div class="row">
+            <hr class="my-4">
+        </div>
+        <!-- Cards da parte de baixo -->
+        <div class="row">
+            <div class="col-md-4">
                 <div class="card text-center financial-card">
                     <div class="card-header">
                         Contas a Pagar
@@ -53,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <div class="card text-center financial-card">
                     <div class="card-header">
                         Total Despesas
@@ -63,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <div class="card text-center financial-card">
                     <div class="card-header">
                         Saldo Final do Mês
@@ -74,35 +81,15 @@
                 </div>
             </div>
         </div>
-        <div class="row"></div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <div class="card financial-card">
                     <div class="card-header">
-                        Contas a Receber
+                        Contas a Receber e Pagar
                     </div>
                     <div class="card-body">
-                        <canvas id="contasReceberChart"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card financial-card">
-                    <div class="card-header">
-                        Contas a Pagar
-                    </div>
-                    <div class="card-body">
-                        <canvas id="contasPagarChart"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card financial-card">
-                    <div class="card-header">
-                        Controle de Estoque
-                    </div>
-                    <div class="card-body">
-                        <canvas id="controleEstoqueChart"></canvas>
+                        <canvas class="my-4 w-100" id="myChart" width="697" height="294"
+                                style="display: block; box-sizing: border-box; height: 294px; width: 697px;"></canvas>
                     </div>
                 </div>
             </div>
@@ -115,7 +102,6 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    // Dados fictícios para os gráficos
     var contasReceberData = {
         labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
         datasets: [{
@@ -126,7 +112,6 @@
             borderWidth: 1
         }]
     };
-
     var contasPagarData = {
         labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
         datasets: [{
@@ -137,18 +122,17 @@
             borderWidth: 1
         }]
     };
-
-    var controleEstoqueData = {
-        labels: ["Produto A", "Produto B", "Produto C", "Produto D", "Produto E"],
+    
+    var contasReceberPagarData = {
+        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
         datasets: [{
-            label: 'Controle de Estoque',
-            data: [50, 80, 120, 40, 60],
+            label: 'Contas a Receber e Pagar',
+            data: [1500, 1900, 1700, 2700, 1550],
             backgroundColor: 'rgba(255, 206, 86, 0.2)',
             borderColor: 'rgba(255, 206, 86, 1)',
             borderWidth: 1
         }]
     };
-
 
     var options = {
         scales: {
@@ -158,22 +142,9 @@
         }
     };
 
-
-    var contasReceberChart = new Chart(document.getElementById('contasReceberChart'), {
+    var contasReceberChart = new Chart(document.getElementById('myChart'), {
         type: 'bar',
-        data: contasReceberData,
-        options: options
-    });
-
-    var contasPagarChart = new Chart(document.getElementById('contasPagarChart'), {
-        type: 'bar',
-        data: contasPagarData,
-        options: options
-    });
-
-    var controleEstoqueChart = new Chart(document.getElementById('controleEstoqueChart'), {
-        type: 'bar',
-        data: controleEstoqueData,
+        data: contasReceberPagarData,
         options: options
     });
 </script>

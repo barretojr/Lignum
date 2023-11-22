@@ -10,8 +10,7 @@ class Finantial extends Model
     use HasFactory;
     protected $fillable = [
         'description',
-        'typefinancial',
-        'typefinantial_id', // A chave estrangeira
+        'type', 
         'value',
     ];
 

@@ -8,11 +8,13 @@ use Illuminate\Support\Facades\DB;
 
 class ProductsController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('products.index');
     }
 
-    public function store(){
+    public function store()
+    {
         $clients = DB::table('clients')
             ->orderBy('name', 'asc')
             ->get();
@@ -21,14 +23,13 @@ class ProductsController extends Controller
             ->orderBy('type', 'asc')
             ->get();
 
-        if(count($clients) > 0){
-            if(count($items) > 0){
+        if (count($clients) > 0) {
+            if (count($items) > 0) {
                 return view('products.store', ["clients" => $clients, "items" => $items]);
             }
             return view('products.store', ["clients" => $clients, "items" => false]);
-        }
-        else{
-            if(count($items) > 0){
+        } else {
+            if (count($items) > 0) {
                 return view('products.store', ["clients" => false, "items" => $items]);
             }
         }
@@ -36,12 +37,13 @@ class ProductsController extends Controller
         return view('products.store', ["clients" => false, "items" => false]);
     }
 
-    public function list(){
+    public function list()
+    {
         $products = DB::table('products')
             ->orderBy('created_at', 'asc')
             ->get();
 
-        if(count($products) > 0){
+        if (count($products) > 0) {
             $productView = "";
             foreach ($products as $key => $product) {
                 $formatedData = date('d/m/Y', $product->expiration);
@@ -49,25 +51,25 @@ class ProductsController extends Controller
                     '
                     <div class="product-item">
                         <div class="product-info">
-                            <h3>Nº  '.$product->id.'</h3>
+                            <h3>Nº  ' . $product->id . '</h3>
                             <p>Data de entrega</p>
-                            <p>'.$formatedData.'</p>
+                            <p>' . $formatedData . '</p>
                         </div>
                         <div class="details">
-                            <a href="'.route('products.show', ['product' => $product->id]).'">Detalhes</a>
+                            <a href="' . route('products.show', ['product' => $product->id]) . '">Detalhes</a>
                         </div>
                     </div>
                     ';
             }
-        }
-        else{
+        } else {
             $productView = false;
         }
 
         return view("products.list", ["view" => $productView]);
     }
 
-    public function show($id){
+    public function show($id)
+    {
         $products = DB::table("products")
             ->where("id", $id)
             ->first();
@@ -77,17 +79,18 @@ class ProductsController extends Controller
             ->orderBy('created_at', 'asc')
             ->first();
 
-        if(!$products){
+        if (!$products) {
             return view("products.show", ["error" => true]);
         }
 
         return view("products.show", ["products" => $products, "clients" => $clients]);
     }
 
-    public function insert(Request $r){
+    public function insert(Request $r)
+    {
         $expiration = strtotime($r->expiration);
 
-        if(!$r->itens){
+        if (!$r->itens) {
             $r->itens = "";
         }
 
@@ -104,17 +107,18 @@ class ProductsController extends Controller
             'status' => 'active'
         ]);
 
-        if($product){
+        if ($product) {
             return view('products.index', ["created" => true]);
         }
 
         return view('products.store', ["error" => true]);
     }
 
-    public function update($id, Request $r){
+    public function update($id, Request $r)
+    {
         $expiration = strtotime($r->expiration);
 
-        if(!$r->itens){
+        if (!$r->itens) {
             $r->itens = "";
         }
 
@@ -131,7 +135,7 @@ class ProductsController extends Controller
         ]);
 
         $save = $product->save();
-        if($save){
+        if ($save) {
             return view('products.index', ["updated" => true]);
         }
 
